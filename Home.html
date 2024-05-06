@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Quizreka - Home</title>
+    <link rel="stylesheet" href="home.css" />
+    <style>
+      body {
+        background-image: url("https://t4.ftcdn.net/jpg/03/03/32/29/360_F_303322991_j4dMRbdkvaTKU8o50FJichVrYEbvjbWJ.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 0;
+        padding: 0;
+      }
+
+      .main {
+        width: 100%;
+        background: linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.5) 50%,
+            rgba(0, 0, 0, 0.5) 50%
+          ),
+          url(1.jpg);
+        background-position: center;
+        background-size: cover;
+        height: 100vh;
+      }
+
+      .navbar {
+        width: 1200px;
+        height: 75px;
+        margin: auto;
+      }
+
+      .icon {
+        width: 200px;
+        float: left;
+        height: 70px;
+      }
+
+      .logo {
+        color: #ff7200;
+        font-size: 35px;
+        font-family: Arial;
+        padding-left: 20px;
+        float: left;
+        padding-top: 10px;
+        margin-top: 5px;
+      }
+
+      .menu {
+        width: 400px;
+        float: left;
+        height: 70px;
+        margin-left: 400px;
+      }
+
+      ul {
+        float: left;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      ul li {
+        margin-left: 62px;
+        margin-top: 27px;
+        font-size: 14px;
+      }
+
+      ul li a {
+        text-decoration: none;
+        color: #fff;
+        font-family: Arial;
+        font-weight: bold;
+        text-transform: uppercase;
+        transition: 0.4s ease-in-out;
+        font-size: 20px;
+      }
+
+      ul li a:hover {
+        color: #ff7200;
+      }
+
+      .content {
+        width: 1200px;
+        height: auto;
+        margin: auto;
+        color: #fff;
+        position: relative;
+        padding-top: 50px; /* Adjusted padding for better spacing */
+      }
+
+      .content .par {
+        padding-left: 20px;
+        padding-bottom: 25px;
+        font-family: Arial;
+        letter-spacing: 1.2px;
+        line-height: 30px;
+        margin-top: 20px;
+      }
+
+      .content h1 {
+        font-family: "Times New Roman";
+        font-size: 50px;
+        padding-left: 20px;
+        margin-top: 9%;
+        letter-spacing: 2px;
+      }
+
+      .quiz-categories {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 150px;
+      }
+
+      .quiz-category {
+        width: 300px;
+        height: 300px;
+        background: linear-gradient(
+          to top,
+          rgba(255, 255, 255, 0.8) 50%,
+          rgba(169, 56, 56, 0.8) 50%
+        );
+        color: #fff;
+        border-radius: 10px;
+        text-align: center;
+        padding-top: 50px;
+        font-size: 24px;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.3s;
+      }
+
+      .quiz-category:hover {
+        background-color: #faf4ee;
+        transform: scale(1.1);
+      }
+      .quiz-cat {
+        color: black;
+        font-size: 15px;
+        margin-top: 100px;
+        align-content: normal;
+      }
+
+      .header {
+        z-index: 1;
+        background: linear-gradient(-45deg, red, green, blue, yellow);
+        background-size: 400% 400%;
+        width: 100%;
+        height: 100vh;
+        animation: animate 15s ease infinite;
+      }
+      .header ul {
+        height: 50px;
+        display: flex;
+        justify-content: center;
+      }
+      .header ul li {
+        display: inline-block;
+        padding: 40px 15px;
+      }
+      .header ul li a {
+        text-decoration: none;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 20px;
+        padding: 5px 10px;
+      }
+      .header ul li a:hover {
+        background: #fff;
+        color: #000;
+      }
+      .header h2 {
+        text-align: center;
+        color: #fff;
+        font-size: 60px;
+        margin-top: 15%;
+        margin-bottom: 20px;
+      }
+      .header p {
+        text-align: center;
+        font-size: 18px;
+        width: 35%;
+        margin: auto;
+        color: #ddd;
+        line-height: 1.7;
+      }
+      @keyframes animate {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      .card {
+        position: relative;
+        width: 300px;
+        height: 200px;
+        border-radius: 10px;
+        box-shadow: 0px 5px 20px rgba(216, 8, 8, 0.5);
+        transition: 0.3s;
+        padding: 30px 50px;
+        background: #fff;
+        cursor: pointer;
+        margin-left: 160px;
+        margin-top: 300px;
+      }
+
+      .card:hover {
+        height: 400px;
+      }
+
+      .imgbox {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transform: translateY(-80px);
+        z-index: 99;
+      }
+
+      img {
+        width: 100%;
+        border-radius: 10px;
+        box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+      }
+
+      .contenta {
+        padding: 10px 20px;
+        text-align: center;
+        transform: translateY(-450px);
+        opacity: 0;
+        transition: 0.3s;
+      }
+
+      .card:hover > .contenta {
+        opacity: 1;
+        transform: translateY(-180px);
+      }
+
+      .contenta h2 {
+        color: #7f9ead;
+      }
+
+      .main {
+        width: 100%;
+        background: linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.5) 50%,
+            rgba(0, 0, 0, 0.5) 50%
+          ),
+          url(1.jpg);
+        background-position: center;
+        background-size: cover;
+        height: 100vh;
+        animation: animate 15s ease infinite;
+      }
+
+      .header {
+        z-index: 1;
+        background: linear-gradient(-45deg, red, green, blue, yellow);
+        background-size: 400% 400%;
+        width: 100%;
+        height: 100vh;
+      }
+
+      @keyframes animate {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: #7aacff;
+      }
+      .image-container {
+        width: 50vmin;
+        position: absolute;
+        height: fit-content;
+        transform: translate(-50%, -50%);
+        top: 30%;
+        right: 0%; /* Adjust the right distance */
+        overflow: hidden;
+        border: 10px solid #231f1f; /* Adjust the border size */
+        border-radius: 8px;
+        box-shadow: 10px 15px 10px 10px #ff7200; /* Adjust the box shadow */
+        row-gap: 10px;
+        left: 90%;
+      }
+      .logo:hover {
+        color: #ffac33; /* Change the color on hover */
+      }
+
+      .quiz-category:hover {
+        background-color: #faf4ee;
+        transform: scale(1.1);
+      }
+
+      .quiz-cat:hover {
+        color: #ff7200;
+      }
+
+      .wrapper {
+        width: 100%;
+        display: flex;
+        animation: slide 16s infinite;
+      }
+      @keyframes slide {
+        0% {
+          transform: translateX(0);
+        }
+        25% {
+          transform: translateX(0);
+        }
+        30% {
+          transform: translateX(-100%);
+        }
+        50% {
+          transform: translateX(-100%);
+        }
+        55% {
+          transform: translateX(-200%);
+        }
+        75% {
+          transform: translateX(-200%);
+        }
+        80% {
+          transform: translateX(-300%);
+        }
+        100% {
+          transform: translateX(-300%);
+        }
+      }
+      img {
+        width: 100%;
+      }
+      .contenta p {
+        font-size: 15px;
+        margin-top: 0px;
+        margin-bottom: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="navbar">
+        <div class="icon">
+          <h2 class="logo">QUIZREKA</h2>
+        </div>
+        <div class="menu">
+          <ul>
+            <li>
+              <a href="Home.html"><span>HOME</span><i></i></a>
+            </li>
+            <li>
+              <a href="about.html"><span>ABOUT</span></a
+              ><i></i>
+            </li>
+            <li>
+              <a href="#"><span>SERVICE</span></a
+              ><i></i>
+            </li>
+            <li>
+              <a href="#"><span>CONTACT</span></a
+              ><i></i>
+            </li>
+            <li>
+              <a href="newlogin.html"><span>Login</span></a
+              ><i></i>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="content">
+        <h1>
+          QUIZREKA: <br /><span>Explore and Challenge Yourself</span> <br />
+        </h1>
+        <p class="par">
+          Explore our quiz collection and challenge yourself with interesting
+          questions<br />
+
+          Presents The quiz in an arranged and convenient manner
+        </p>
+
+        <div class="image-container">
+          <div class="wrapper">
+            <img
+              src="https://www.ivyhouse.co.uk/wp-content/uploads/Award-Badges2-768x768.png"
+            />&nbsp;&nbsp;
+            <img
+              src="https://company.overdrive.com/wp-content/uploads/2022/01/common-sense-learning-award.png"
+            />&nbsp;&nbsp;&nbsp;
+            <img
+              src="https://www.prodigylearning.com/wp-content/uploads/2023/07/ISTE_Seal_RECTANGLEpng.png"
+            />
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="https://m.media-amazon.com/images/I/51gzzPnwJ8L.png" />
+          </div>
+        </div>
+
+        <div class="quiz-categories">
+          <div class="quiz-category" onclick="startQuiz('html-quiz.html')">
+            HTML Quiz
+            <p class="quiz-cat">
+              <b>Tips:</b>
+              You can use the HTML "hr" tag to separate out different topics on
+              a page. We often use this tag when we want to create a thematic
+              break or separate items on an HTML page. In this article, you'll
+              learn how to use this tag in your HTML code.
+            </p>
+          </div>
+          <div class="quiz-category" onclick="startQuiz('css-quiz.html')">
+            CSS Quiz
+            <p class="quiz-cat">
+              <b>Tips:</b>
+              Style your HTML documents with CSS to enhance the visual
+              presentation. CSS allows you to control the layout, colors, and
+              fonts of your web pages.
+            </p>
+          </div>
+          <div class="quiz-category" onclick="startQuiz('java-quiz.html')">
+            Java Quiz
+            <p class="quiz-cat">
+              <b>Tips:</b>
+              Java is a versatile and powerful programming language used for
+              building a wide range of applications. Learn about Java's syntax,
+              libraries, and object-oriented programming concepts.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="card">
+        <div class="imgbox">
+          <img src="images/3.jpg" />
+        </div>
+        <div class="contenta">
+          <h2>Maley Caan</h2>
+          <p>
+            “Quizizz motivates [students], increases confidence, and can help to
+            establish a culture of learning and growing from mistakes. I also
+            use it to review and prepare my students for benchmark and state
+            tests. They love it every time.”
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="imgbox">
+          <img src="images/4.jpg" />
+        </div>
+        <div class="contenta">
+          <h2>Shallamar Goodwin-Richards</h2>
+          <p>
+            “I use Quizreka to reinforce and check understanding after we've
+            covered a concept pretty thoroughly. I use it in stations. I use it
+            for tutoring. I also use it to review and prepare my students for
+            benchmark and state tests. They love it every time.”
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="imgbox">
+          <img src="images/6.jpg" />
+        </div>
+        <div class="contenta">
+          <h2>john lee</h2>
+          <p>
+            “I use Quizreka to reinforce and check understanding after we've
+            covered a concept pretty thoroughly. I use it in stations. I use it
+            for tutoring. I also use it to review and prepare my students for
+            benchmark and state tests. They love it every time.”
+          </p>
+        </div>
+      </div>
+    </div>
+    <script>
+      function startQuiz(quizUrl) {
+        // Open the respective quiz website based on the provided URL
+        window.location.href = "Questions.html";
+      }
+    </script>
+    <footer>
+      <nav class="nav">&copy;Quizreka 2023</nav>
+    </footer>
+  </body>
+</html>

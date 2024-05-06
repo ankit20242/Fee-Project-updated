@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>About Us - QUIZREKA</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+       body {
+        background-color: #030009;
+        margin: 0;
+        padding: 0;
+      }
+
+      .main {
+        width: 100%;
+        background: linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.5) 50%,
+            rgba(0, 0, 0, 0.5) 50%
+          ),
+          url(1.jpg);
+        background-position: center;
+        background-size: cover;
+        height: 100vh;
+      }
+
+      .navbar {
+        width: 1200px;
+        height: 75px;
+        margin: auto;
+      }
+
+      .icon {
+        width: 200px;
+        float: left;
+        height: 70px;
+      }
+
+      .logo {
+        color: #ff7200;
+        font-size: 35px;
+        font-family: Arial;
+        padding-left: 20px;
+        float: left;
+        padding-top: 10px;
+        margin-top: 5px;
+      }
+
+      .menu {
+        width: 400px;
+        float: left;
+        height: 70px;
+        margin-left: 400px;
+      }
+
+      ul {
+        float: left;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      ul li {
+        margin-left: 62px;
+        margin-top: 27px;
+        font-size: 14px;
+      }
+
+      ul li a {
+        text-decoration: none;
+        color: #fff;
+        font-family: Arial;
+        font-weight: bold;
+        text-transform: uppercase;
+        transition: 0.4s ease-in-out;
+        font-size: 20px;
+      }
+
+      ul li a:hover {
+        color: #ff7200;
+      }
+
+      .about-container {
+        width: 100%;
+        height: auto;
+       
+        background-position: center;
+        background-size: cover;
+        color: #fff;
+        text-align: center;
+        padding: 100px 20px;
+      }
+
+      .about-content {
+        width: 80%;
+        margin: auto;
+        display: flex;
+        justify-content: flex-end; /* Align boxes to the right side */
+        flex-wrap: wrap;
+      }
+
+      .about-section {
+        width: 48%;
+        margin-bottom: 40px;
+        border: 2px solid #ff7200;
+        border-radius: 10px;
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+        transition: transform 0.3s;
+        margin-left: 10px; /* Add some margin between boxes */
+      }
+
+      .about-section:hover {
+        transform: scale(1.05);
+      }
+
+      .about-content h2 {
+        font-family: sans-serif;
+        color: #ff7200;
+        font-size: 30px;
+        background-color: #fff;
+        border-radius: 10px;
+        margin: 2px;
+        padding: 8px;
+        display: inline-block;
+      }
+
+      .about-paragraph {
+        font-family: Arial;
+        letter-spacing: 1.2px;
+        line-height: 30px;
+        margin-top: 20px;
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      .about-paragraph img {
+        width: 100%;
+        border-radius: 10px;
+        margin-top: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .about-animation {
+        animation: fadeInUp 1s ease-in-out;
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .main {
+        width: 100%;
+        background: linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.5) 50%,
+            rgba(0, 0, 0, 0.5) 50%
+          ),
+          url(1.jpg);
+        background-position: center;
+        background-size: cover;
+        height: 100vh;
+      }
+
+      .navbar {
+        width: 1200px;
+        height: 75px;
+        margin: auto;
+
+        
+      }
+
+      .icon {
+        width: 200px;
+        float: left;
+        height: 70px;
+      }
+
+      .logo {
+        color: #ff7200;
+        font-size: 35px;
+        font-family: Arial;
+        padding-left: 20px;
+        float: left;
+        padding-top: 10px;
+        margin-top: 5px;
+      }
+
+      .menu {
+        width: 400px;
+        float: left;
+        height: 70px;
+        margin-left: 400px;
+      }
+
+      ul {
+        float: left;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      ul li {
+        margin-left: 62px;
+        margin-top: 27px;
+        font-size: 14px;
+      }
+
+      ul li a {
+        text-decoration: none;
+        color: #fff;
+        font-family: Arial;
+        font-weight: bold;
+        text-transform: uppercase;
+        transition: 0.4s ease-in-out;
+        font-size: 20px;
+      }
+
+      ul li a:hover {
+        color: #ff7200;
+      }
+      @import url(https://fonts.googleapis.com/css?family=Dancing+Script:400,700);
+@use postcss-nested;
+
+html {
+  height: 100%;
+  overflow: auto; /* Enable scrolling */
+}
+
+body {
+  margin: 0;
+  padding: 2rem;
+  background-color: black;
+  font-family: monospace;
+  color: white;
+}
+h1 {
+  margin-top: 2rem;
+  text-align: center;
+}
+h1 + p {
+  text-align: center;
+}
+
+@keyframes bookFadeOut {
+  50% {
+    border: 1px dashed rgba(255, 255, 255, 0.1);
+  }
+}
+@import url("https://fonts.googleapis.com/css?family=Exo:400,700");
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: "Exo", sans-serif;
+}
+
+.context {
+  width: 100%;
+  position: absolute;
+  top: 50vh;
+}
+
+.context h1 {
+  text-align: center;
+  color: #fff;
+  font-size: 50px;
+}
+
+.area {
+  background: #030009;
+  background: -webkit-linear-gradient(to left, #d0d2da, rgb(255, 255, 255));
+  width: 100%;
+  height: 100vh;
+}
+
+.circles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.circles li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  animation: animate 25s linear infinite;
+  bottom: -150px;
+}
+
+.circles li:nth-child(1) {
+  left: 25%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 0s;
+}
+
+.circles li:nth-child(2) {
+  left: 10%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 2s;
+  animation-duration: 12s;
+}
+
+.circles li:nth-child(3) {
+  left: 70%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 4s;
+}
+
+.circles li:nth-child(4) {
+  left: 40%;
+  width: 60px;
+  height: 60px;
+  animation-delay: 0s;
+  animation-duration: 18s;
+}
+
+.circles li:nth-child(5) {
+  left: 65%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 0s;
+}
+
+.circles li:nth-child(6) {
+  left: 75%;
+  width: 110px;
+  height: 110px;
+  animation-delay: 3s;
+}
+
+.circles li:nth-child(7) {
+  left: 35%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 7s;
+}
+
+.circles li:nth-child(8) {
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  animation-delay: 15s;
+  animation-duration: 45s;
+}
+
+.circles li:nth-child(9) {
+  left: 20%;
+  width: 15px;
+  height: 15px;
+  animation-delay: 2s;
+  animation-duration: 35s;
+}
+
+.circles li:nth-child(10) {
+  left: 85%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 0s;
+  animation-duration: 11s;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+    border-radius: 0;
+  }
+
+  100% {
+    transform: translateY(-1000px) rotate(720deg);
+    opacity: 0;
+    border-radius: 50%;
+  }
+}
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+.clear {
+  clear: both;
+}
+img {
+  max-width: 100%;
+  border: 0px;
+}
+ul,
+ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+}
+a:focus,
+a:active,
+a:visited,
+a:hover {
+  text-decoration: none;
+  outline: none;
+}
+a:hover {
+  color: #e73700;
+}
+h2 {
+  margin-bottom: 48px;
+  padding-bottom: 16px;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 700;
+  position: relative;
+  text-transform: capitalize;
+}
+h3 {
+  margin: 0 0 10px;
+  font-size: 28px;
+  line-height: 36px;
+}
+button {
+  outline: none !important;
+}
+.mar {
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+h1 {
+  transition: transform 0.3s ease; /* Add a smooth transition effect */
+}
+
+h1:hover {
+  transform: translateX(
+    10px
+  ); /* Adjust the value to control the amount of translation */
+}
+
+.line-title {
+  position: relative;
+  width: 400px;
+}
+.line-title::before,
+.line-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  border-radius: 2px;
+}
+.line-title::before {
+  width: 100%;
+  background: #f2f2f2;
+}
+.line-title::after {
+  width: 32px;
+  background: #e73700;
+}
+.main {
+      width: 100%;
+      min-height: 100vh;
+      
+      background-repeat: no-repeat;
+      background-position: center top;
+      transition: 0.01s ease;
+      pointer-events: auto;
+    }
+
+    .main.active {
+      pointer-events: none;
+      filter: blur(12px);
+    }
+    .container {
+      display: flex;
+      height: 100vh;
+      width: 200%;
+    }
+
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 20px 10%;
+      background-color: transparent;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+     
+    }
+    .logo {
+      font-weight: 800;
+      font-size: 32px;
+      color: white;
+      text-decoration: none;
+      filter: drop-shadow(0 0 2px #fff);
+    }
+    .navbar a {
+      font-size: 18px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 25px;
+    letter-spacing: 0.05em;
+    transition: 0.3s;
+    margin-right: 200px;
+    
+      
+    }
+    .navbar a.active,
+    .navbar a:hover {
+      color: #980200;
+      
+    }
+
+    @media (max-width: 767px) {
+      .header {
+        /* flex-wrap: wrap; */
+        padding: 20px 2%;
+      }
+      .navbar a {
+        margin-left: 10px;
+        font-size: 16px;
+        letter-spacing: 0.01em;
+        font-weight: 800;
+        margin-left: 250px;
+      }
+    }
+
+
+    </style>
+  </head>
+  <body>
+    <div class="context"></div>
+
+  <div class="area">
+    <ul class="circles">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+    <main class="main">
+      <header class="header">
+        <a href="#" class="logo">QUIZREKA.</a>
+        <nav class="navbar">
+          <a href="newhome1.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="#">Services</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </header>
+      
+    <div class="about-container">
+      <div class="about-content">
+        <div class="about-section about-animation">
+          <h2>About QUIZREKA</h2>
+          <p class="about-paragraph">
+            Welcome to QUIZREKA, where the world of knowledge meets the thrill
+            of quizzes. Our platform is designed to provide an engaging and
+            challenging experience for users of all interests and backgrounds.
+          </p>
+          <p class="about-paragraph">
+            At QUIZREKA, we believe in the power of learning through play. Our
+            mission is to make learning fun and accessible to everyone. With a
+            diverse range of quiz categories, we cater to quiz enthusiasts,
+            casual players, and lifelong learners.
+          </p>
+        </div>
+
+        <div class="about-section about-animation">
+          <h2>Our Vision</h2>
+          <p class="about-paragraph">
+            Our vision is to create a global community of curious minds,
+            constantly pushing the boundaries of knowledge. We want to inspire
+            individuals to explore new topics, challenge their intellect, and
+            connect with like-minded learners.
+          </p>
+          <p class="about-paragraph">
+            Through a seamless and user-friendly platform, we aim to make the
+            learning journey enjoyable and rewarding. Join us on this quest for
+            knowledge, and let's embark on a journey of discovery together!
+          </p>
+        </div>
+
+        <div class="about-section about-animation">
+          <h2>Why Choose QUIZREKA?</h2>
+          <p class="about-paragraph">
+            - Diverse Quiz Categories: From science and technology to pop
+            culture, we cover it all.
+          </p>
+          <p class="about-paragraph">
+            - Engaging Challenges: Test your knowledge with thought-provoking
+            questions and quizzes.
+          </p>
+          <p class="about-paragraph">
+            - Community Connection: Connect with fellow learners, share your
+            achievements, and learn from each other.
+          </p>
+          <p class="about-paragraph">
+            - Continuous Learning: Our platform encourages lifelong learning and
+            personal growth.
+          </p>
+        </div>
+
+        <div class="about-section about-animation">
+          <h2>Meet the Team</h2>
+          <p class="about-paragraph">
+            Our team at QUIZREKA is a passionate group of individuals dedicated
+            to creating a vibrant learning community. From quiz enthusiasts to
+            tech experts, we bring diverse skills and perspectives to the table.
+          </p>
+          <p class="about-paragraph">
+            Together, we work tirelessly to ensure you have the best possible
+            quiz experience. Meet some of the faces behind QUIZREKA!
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
